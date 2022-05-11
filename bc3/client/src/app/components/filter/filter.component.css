@@ -1,0 +1,20 @@
+:host {
+  background: #efefef;
+  display: block;
+  padding: .5em;
+  border-radius: .1em;
+}
+
+div {
+  display: flex;
+  flex-direction: row;
+  align-content: stretch;
+  column-gap: .3em;
+  margin: .5em 0;
+}
+
+input, select {
+  flex-grow: 1;
+  border: 1px solid gray;
+  height: 2em;
+}

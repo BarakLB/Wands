@@ -1,0 +1,25 @@
+<div>
+  <input #term
+         type="text"
+         name="search"
+         placeholder="Search for"
+         (keyup)="changed.emit({term: term.value})">
+</div>
+<div *ngIf="options">
+  <select #core (change)="changed.emit({core: core.value})">
+    <option value="All">All</option>
+    <option *ngFor="let core of options.core" [value]="core">{{core}}</option>
+  </select>
+  <select #wood (change)="changed.emit({wood: wood.value})">
+    <option value="All">All</option>
+    <option *ngFor="let wood of options.wood" [value]="wood">{{wood}}</option>
+  </select>
+  <select #length (change)="changed.emit({length: length.value})">
+    <option value="All">All</option>
+    <option *ngFor="let length of options.length" [value]="length">{{length}}</option>
+  </select>
+  <select #flexibility (change)="changed.emit({flexibility: flexibility.value})">
+    <option value="All">All</option>
+    <option *ngFor="let flexibility of options.flexibility" [value]="flexibility">{{flexibility}}</option>
+  </select>
+</div>
